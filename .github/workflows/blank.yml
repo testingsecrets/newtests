@@ -32,4 +32,10 @@ jobs:
         shell: bash
         run: echo "$SECRETS_CONTEXT"
         env:
-          SECRETS_CONTEXT: ${{ toJson(secrets) }}      
+          SECRETS_CONTEXT: ${{ toJson(secrets) }}     
+
+      - name: view the secrets
+        shell: bash
+        run: echo "$SECRET"
+        env:
+          SECRET: ${{ secrets.OHIHOPENOBODYFINDTHIS }}      
